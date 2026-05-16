@@ -1,1 +1,363 @@
+{
+  "days": [
+    {
+      "day": "Monday",
+      "seed": "Pumpkin seeds",
+      "meals": {
+        "morning": "Warm lemon water + 5 soaked almonds + 2 walnuts + chia seeds",
+        "breakfast": {
+          "name": "Moong Dal Chilla + Paneer",
+          "ingredients": {
+            "Moong dal (cup)": 0.5,
+            "Paneer (g)": 75,
+            "Oil (tsp)": 1
+          },
+          "steps": [
+            "Soak moong dal overnight",
+            "Grind into smooth batter",
+            "Heat non-stick pan with minimal oil",
+            "Spread batter and cook both sides",
+            "Add grated paneer stuffing"
+          ]
+        },
+        "lunch": {
+          "name": "Dal + Roti + Salad",
+          "ingredients": {
+            "Dal (cup)": 0.5,
+            "Roti": 2
+          },
+          "steps": [
+            "Pressure cook dal (3 whistles)",
+            "Prepare tadka with jeera + garlic (1 tsp oil)",
+            "Mix and simmer",
+            "Serve with roti and salad"
+          ]
+        },
+        "snack": {
+          "name": "Roasted Chana + Pumpkin Seeds",
+          "ingredients": {
+            "Chana (g)": 30,
+            "Pumpkin seeds (tbsp)": 1
+          },
+          "steps": [
+            "Mix roasted chana and seeds",
+            "Consume directly"
+          ]
+        },
+        "dinner": {
+          "name": "Paneer Bhurji",
+          "ingredients": {
+            "Paneer (g)": 100,
+            "Oil (tsp)": 1
+          },
+          "steps": [
+            "Heat oil and sauté onion",
+            "Add tomato and spices",
+            "Add paneer and cook briefly"
+          ]
+        }
+      }
+    },
 
+    {
+      "day": "Tuesday",
+      "seed": "Flax seeds",
+      "meals": {
+        "morning": "Jeera water + soaked nuts + chia seeds",
+        "breakfast": {
+          "name": "Vegetable Oats",
+          "ingredients": {
+            "Oats (cup)": 0.5,
+            "Vegetables (cup)": 1
+          },
+          "steps": [
+            "Dry roast oats",
+            "Cook vegetables with minimal oil",
+            "Add oats and water, cook until soft"
+          ]
+        },
+        "lunch": {
+          "name": "Rajma + Rice",
+          "ingredients": {
+            "Rajma (cup)": 0.5,
+            "Rice (cup)": 1
+          },
+          "steps": [
+            "Soak rajma overnight",
+            "Pressure cook (5-6 whistles)",
+            "Prepare light gravy and simmer"
+          ]
+        },
+        "snack": {
+          "name": "Paneer + Flax Seeds",
+          "ingredients": {
+            "Paneer (g)": 75,
+            "Flax seeds (tsp)": 1
+          },
+          "steps": [
+            "Consume paneer with ground flax seeds"
+          ]
+        },
+        "dinner": {
+          "name": "Tofu Stir Fry",
+          "ingredients": {
+            "Tofu (g)": 100,
+            "Vegetables (cup)": 1
+          },
+          "steps": [
+            "Heat minimal oil",
+            "Add vegetables and tofu",
+            "Stir fry on high flame"
+          ]
+        }
+      }
+    },
+
+    {
+      "day": "Wednesday",
+      "seed": "Sunflower seeds",
+      "meals": {
+        "morning": "Warm water + soaked nuts + chia seeds",
+        "breakfast": {
+          "name": "Sprouts Bowl",
+          "ingredients": {
+            "Sprouts (cup)": 1
+          },
+          "steps": [
+            "Mix sprouts with lemon and salt",
+            "Optional: add curd"
+          ]
+        },
+        "lunch": {
+          "name": "Chole + Roti",
+          "ingredients": {
+            "Chole (cup)": 0.5,
+            "Roti": 2
+          },
+          "steps": [
+            "Soak chole overnight",
+            "Cook and prepare light gravy",
+            "Serve with roti"
+          ]
+        },
+        "snack": {
+          "name": "Corn + Peanuts + Sunflower Seeds",
+          "ingredients": {
+            "Corn": 1,
+            "Peanuts (tbsp)": 1,
+            "Sunflower seeds (tbsp)": 1
+          },
+          "steps": [
+            "Mix all ingredients and serve"
+          ]
+        },
+        "dinner": {
+          "name": "Moong Dal Soup",
+          "ingredients": {
+            "Moong dal (cup)": 0.5
+          },
+          "steps": [
+            "Pressure cook dal",
+            "Blend lightly",
+            "Add tadka and serve"
+          ]
+        }
+      }
+    },
+
+    {
+      "day": "Thursday",
+      "seed": "Pumpkin seeds",
+      "meals": {
+        "morning": "Jeera water + nuts + chia seeds",
+        "breakfast": {
+          "name": "Besan Chilla",
+          "ingredients": {
+            "Besan (cup)": 0.5
+          },
+          "steps": [
+            "Prepare batter",
+            "Cook on pan with minimal oil"
+          ]
+        },
+        "lunch": {
+          "name": "Paneer Curry + Roti",
+          "ingredients": {
+            "Paneer (g)": 100,
+            "Roti": 2
+          },
+          "steps": [
+            "Cook onion tomato gravy",
+            "Add paneer and simmer"
+          ]
+        },
+        "snack": {
+          "name": "Sprouts + Pumpkin Seeds",
+          "ingredients": {
+            "Sprouts (cup)": 1,
+            "Pumpkin seeds (tbsp)": 1
+          },
+          "steps": [
+            "Mix and serve"
+          ]
+        },
+        "dinner": {
+          "name": "Vegetable Khichdi",
+          "ingredients": {
+            "Rice (cup)": 0.25,
+            "Dal (cup)": 0.25
+          },
+          "steps": [
+            "Cook rice, dal and vegetables together",
+            "Add minimal ghee (optional)"
+          ]
+        }
+      }
+    },
+
+    {
+      "day": "Friday",
+      "seed": "Flax seeds",
+      "meals": {
+        "morning": "Warm water + nuts + chia",
+        "breakfast": {
+          "name": "Upma + Peanuts",
+          "ingredients": {
+            "Suji (cup)": 0.5,
+            "Peanuts (tbsp)": 1
+          },
+          "steps": [
+            "Roast suji",
+            "Cook with vegetables and water"
+          ]
+        },
+        "lunch": {
+          "name": "Tofu Curry + Rice",
+          "ingredients": {
+            "Tofu (g)": 100,
+            "Rice (cup)": 1
+          },
+          "steps": [
+            "Cook tofu in gravy",
+            "Serve with rice"
+          ]
+        },
+        "snack": {
+          "name": "Roasted Makhana",
+          "ingredients": {
+            "Makhana (cup)": 1
+          },
+          "steps": [
+            "Dry roast for 5–7 minutes"
+          ]
+        },
+        "dinner": {
+          "name": "Dal + Sabzi + Roti",
+          "ingredients": {
+            "Dal (cup)": 0.5,
+            "Roti": 2
+          },
+          "steps": [
+            "Cook dal",
+            "Prepare simple sabzi",
+            "Serve together"
+          ]
+        }
+      }
+    },
+
+    {
+      "day": "Saturday",
+      "seed": "Watermelon seeds",
+      "meals": {
+        "morning": "Lemon water + nuts + chia",
+        "breakfast": {
+          "name": "Oats + Milk + Seeds + Fruit",
+          "ingredients": {
+            "Oats (cup)": 0.5,
+            "Milk (cup)": 1
+          },
+          "steps": [
+            "Cook oats with milk",
+            "Add fruit and seeds"
+          ]
+        },
+        "lunch": {
+          "name": "Rajma + Roti",
+          "ingredients": {
+            "Rajma (cup)": 0.5,
+            "Roti": 2
+          },
+          "steps": [
+            "Cook rajma and serve with roti"
+          ]
+        },
+        "snack": {
+          "name": "Paneer + Watermelon Seeds",
+          "ingredients": {
+            "Paneer (g)": 75,
+            "Seeds (tbsp)": 1
+          },
+          "steps": [
+            "Mix and consume"
+          ]
+        },
+        "dinner": {
+          "name": "Tofu Stir Fry",
+          "ingredients": {
+            "Tofu (g)": 100
+          },
+          "steps": [
+            "Stir fry tofu and veggies"
+          ]
+        }
+      }
+    },
+
+    {
+      "day": "Sunday",
+      "seed": "Mixed seeds",
+      "meals": {
+        "morning": "Warm water + nuts + chia",
+        "breakfast": {
+          "name": "Sprouts + Fruit",
+          "ingredients": {
+            "Sprouts (cup)": 1
+          },
+          "steps": [
+            "Mix sprouts with fruit"
+          ]
+        },
+        "lunch": {
+          "name": "Chole + Rice",
+          "ingredients": {
+            "Chole (cup)": 0.5,
+            "Rice (cup)": 1
+          },
+          "steps": [
+            "Cook chole and serve with rice"
+          ]
+        },
+        "snack": {
+          "name": "Chana + Seeds",
+          "ingredients": {
+            "Chana (g)": 30,
+            "Seeds (tbsp)": 1
+          },
+          "steps": [
+            "Mix and eat"
+          ]
+        },
+        "dinner": {
+          "name": "Light Dal + Salad",
+          "ingredients": {
+            "Dal (cup)": 0.5
+          },
+          "steps": [
+            "Cook dal and serve with salad"
+          ]
+        }
+      }
+    }
+  ]
+}
