@@ -1,210 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Diet Plan</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<meta name="description" content="Weekly diet plan with meal tracking, ingredient scaling, and offline support">
+<meta name="theme-color" content="#6366f1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="My Diet Plan">
+<meta property="og:description" content="Weekly diet plan with meal tracking and ingredient scaling">
 
-<title>Diet App</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>">
+<link rel="manifest" href="./manifest.json">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --accent-dark: #4f46e5;
+  --accent-bg: rgba(99, 102, 241, 0.1);
+  --tl-line: #e2e8f0;
+  --tl-dot: #cbd5e1;
+  --tl-dot-active: #6366f1;
+}
+[data-bs-theme="dark"] {
+  --tl-line: #334155;
+  --tl-dot: #475569;
+  --accent-bg: rgba(99, 102, 241, 0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-shell {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+/* --- Header --- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.app-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- People stepper (44px touch targets) --- */
+.people-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.people-stepper .btn {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  touch-action: manipulation;
+}
+.people-count {
+  font-weight: 700;
+  font-size: 1.05rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+/* --- Theme toggle (44px touch target) --- */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--bs-border-color);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.1rem;
+  touch-action: manipulation;
+}
+.theme-toggle:hover,
+.theme-toggle:active { border-color: var(--accent); color: var(--accent); }
+
+/* --- Greeting --- */
+.greeting {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+/* --- Day pills --- */
+.day-pills {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+.day-pills::-webkit-scrollbar { display: none; }
+
+.day-pill {
+  scroll-snap-align: center;
+  white-space: nowrap;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  border-radius: 50px;
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  touch-action: manipulation;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.day-pill:hover,
+.day-pill:active { background: var(--accent-bg); }
+.day-pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* --- Week toggle --- */
+.week-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+.week-toggle-btn {
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: all 0.2s;
+}
+.week-toggle-btn:hover,
+.week-toggle-btn:active { background: var(--accent); color: #fff; }
+
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--tl-line);
+  border-radius: 1px;
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+.tl-dot {
+  position: absolute;
+  left: -2rem;
+  top: 1.1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--tl-dot);
+  border: 2px solid var(--tl-dot);
+  transform: translateX(calc(0.55rem - 6px));
+  transition: all 0.3s;
+  z-index: 1;
+}
+.tl-item.is-active .tl-dot {
+  background: var(--tl-dot-active);
+  border-color: var(--tl-dot-active);
+  width: 16px;
+  height: 16px;
+  transform: translateX(calc(0.55rem - 8px));
+  box-shadow: 0 0 0 4px var(--accent-bg);
+  animation: pulse 2s infinite;
+}
+.tl-item.is-past .tl-dot { opacity: 0.4; }
+.tl-item.is-past .meal-card,
+.tl-item.is-past .simple-meal { opacity: 0.55; }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px var(--accent-bg); }
+  50% { box-shadow: 0 0 0 8px var(--accent-bg); }
+}
+
+/* --- Meal cards --- */
+.meal-card {
+  border: none;
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.meal-card:active { transform: scale(0.99); }
+.meal-card.is-active {
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.2);
+}
+.meal-card-hdr {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem;
+  gap: 0.625rem;
+  min-height: 3.5rem;
+}
+.meal-icon { font-size: 1.4rem; flex-shrink: 0; }
+.meal-type {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+}
+.meal-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.meal-chev {
+  margin-left: auto;
+  transition: transform 0.3s;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+.meal-card.expanded .meal-chev { transform: rotate(180deg); }
+
+.meal-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.meal-card.expanded .meal-body { max-height: 1000px; }
+.meal-body-inner {
+  padding: 0 0.875rem 0.875rem;
+}
+
+/* --- Simple meal card --- */
+.simple-meal {
+  border: none;
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.simple-meal .meal-icon { font-size: 1.3rem; }
+.simple-meal-text { font-size: 0.85rem; line-height: 1.4; }
+
+/* --- Day header --- */
+.day-hdr {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.seed-badge { font-size: 0.72rem; font-weight: 600; }
+
+/* --- Ingredients table --- */
+.ing-table { margin-bottom: 0; }
+.ing-table td {
+  padding: 0.3rem 0.4rem;
+  font-size: 0.82rem;
+  vertical-align: middle;
+}
+.ing-table td:first-child {
+  max-width: 60%;
+  word-wrap: break-word;
+}
+.ing-table td:last-child {
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* --- Steps --- */
+.steps-list {
+  font-size: 0.82rem;
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+}
+.steps-list li { margin-bottom: 0.3rem; line-height: 1.45; }
+.steps-list li:last-child { margin-bottom: 0; }
+
+/* --- Section label --- */
+.section-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  opacity: 0.6;
+  margin-bottom: 0.4rem;
+}
+
+/* --- Prep callout --- */
+.prep-callout {
+  border-radius: 0.875rem;
+  border-left: 4px solid #f59e0b;
+}
+.prep-callout ul { font-size: 0.85rem; }
+
+/* --- Loading --- */
+.loading-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  gap: 1rem;
+}
+
+/* --- Sticky top bar --- */
+.sticky-top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bs-body-bg);
+  padding-bottom: 0.5rem;
+  margin: 0 -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: background-color 0.3s;
+}
+.sticky-top-bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--bs-border-color);
+  opacity: 0.5;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 374px) {
+  .app-title { font-size: 1.05rem; }
+  .day-pill { padding: 0.35rem 0.75rem; font-size: 0.75rem; }
+  .meal-card-hdr { padding: 0.75rem; gap: 0.5rem; }
+  .meal-body-inner { padding: 0 0.75rem 0.75rem; }
+  .meal-icon { font-size: 1.2rem; }
+  .meal-name { font-size: 0.85rem; }
+}
+
+@media (min-width: 768px) {
+  .app-shell { padding: 0 2rem; }
+  .sticky-top-bar { margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
+  .meal-card-hdr { padding: 1rem 1.25rem; }
+  .meal-body-inner { padding: 0 1.25rem 1.25rem; }
+  .ing-table td { font-size: 0.88rem; }
+  .steps-list { font-size: 0.88rem; }
 }
 </style>
 </head>
 
-<body class="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white transition duration-300">
+<body>
+<div class="app-shell">
 
-<div class="max-w-md mx-auto p-4">
+  <!-- Sticky top section -->
+  <div class="sticky-top-bar">
+    <header class="app-header">
+      <h1 class="app-title">🥗 My Diet Plan</h1>
+      <div class="header-controls">
+        <div class="people-stepper" style="display:none">
+          <button class="btn btn-outline-secondary" onclick="changePeople(-1)" id="minusBtn" disabled aria-label="Decrease servings">
+            <i class="bi bi-dash"></i>
+          </button>
+          <span class="people-count" id="peopleCount">1</span>
+          <button class="btn btn-outline-secondary" onclick="changePeople(1)" aria-label="Increase servings">
+            <i class="bi bi-plus"></i>
+          </button>
+          <i class="bi bi-people-fill text-muted ms-1" style="font-size:0.85rem"></i>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="themeIcon"></i>
+        </button>
+      </div>
+    </header>
 
-<!-- Header -->
-<div class="flex justify-between items-center mb-6">
-  <button onclick="toggleMenu()" class="text-xl">☰</button>
-  <div id="date" class="text-sm opacity-70"></div>
-  <button onclick="toggleTheme()" class="text-xl">🌙</button>
+    <div class="greeting mb-2" id="greeting"></div>
+
+    <nav class="day-pills mb-0" id="dayPills" aria-label="Select day"></nav>
+  </div>
+
+  <!-- Week toggle (hidden for now) -->
+  <div class="week-toggle-row" style="display:none">
+    <button class="week-toggle-btn" onclick="toggleWeek()">
+      <i class="bi bi-calendar-week me-1"></i><span id="weekLabel">Full Week</span>
+    </button>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading-area" id="loading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main id="app"></main>
+
+  <!-- Prep -->
+  <div id="prep" class="mt-3 mb-4"></div>
+
 </div>
 
-<!-- Controls -->
-<div class="bg-white dark:bg-slate-800 shadow-md rounded-xl p-3 flex items-center gap-3">
-  <span>👥</span>
-  <input id="people" type="number" value="1"
-    class="w-16 px-2 py-1 rounded bg-slate-200 dark:bg-slate-700 text-black dark:text-white"
-    onchange="render()">
-  <button onclick="toggleWeek()"
-    class="ml-auto bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded-lg">
-    Full Week
-  </button>
-</div>
-
-<!-- Content -->
-<div id="app" class="mt-4"></div>
-
-<!-- Prep -->
-<div id="prep" class="mt-6"></div>
-
-</div>
-
-<!-- Side Menu -->
-<div id="menu"
-  class="fixed top-0 left-[-260px] w-64 h-full bg-white dark:bg-slate-800 shadow-lg p-4 transition-all duration-300 z-50">
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
 let DATA = [];
-let selectedDay = getISTDay();
+let selectedDay = 0;
 let showWeek = false;
+let people = 1;
 
-// IST Fix
-function getISTDay(){
+const MEAL_ORDER = ["morning", "breakfast", "lunch", "snack", "dinner"];
+const MEAL_ICONS = { morning: "🌅", breakfast: "🍳", lunch: "🥗", snack: "☕", dinner: "🌙" };
+const SHORT_DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+function getISTDate() {
   const now = new Date();
-  const utc = now.getTime() + (now.getTimezoneOffset()*60000);
-  const ist = new Date(utc + (5.5*60*60*1000));
-  return ist.getDay();
+  return new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (5.5 * 3600000));
 }
 
-fetch("data.json")
-.then(r=>r.json())
-.then(d=>{
-  DATA = d.days;
-  buildMenu();
-  render();
-});
+function getISTDayIndex() {
+  return (getISTDate().getDay() + 6) % 7;
+}
 
-function getCurrentMeal(){
-  const h = new Date().getHours();
-  if(h<10) return "morning";
-  if(h<12) return "breakfast";
-  if(h<17) return "lunch";
-  if(h<20) return "snack";
+function getISTHours() {
+  return getISTDate().getHours();
+}
+
+function getCurrentMeal() {
+  const h = getISTHours();
+  if (h < 10) return "morning";
+  if (h < 12) return "breakfast";
+  if (h < 17) return "lunch";
+  if (h < 20) return "snack";
   return "dinner";
 }
 
-function render(){
+function mealTimeState(key) {
+  const ci = MEAL_ORDER.indexOf(getCurrentMeal());
+  const mi = MEAL_ORDER.indexOf(key);
+  if (mi < ci) return "past";
+  if (mi === ci) return "active";
+  return "future";
+}
 
-  document.getElementById("date").innerText =
-    "Today • " + new Date().toDateString();
+function getGreeting() {
+  const h = getISTHours();
+  if (h < 12) return "Good morning";
+  if (h < 17) return "Good afternoon";
+  if (h < 21) return "Good evening";
+  return "Good night";
+}
 
-  const people = +document.getElementById("people").value;
-  const current = getCurrentMeal();
+function fmtDate() {
+  return getISTDate().toLocaleDateString("en-IN", { weekday: "long", day: "numeric", month: "long" });
+}
 
-  const days = showWeek ? DATA : [DATA[selectedDay % DATA.length]];
+// --- Theme ---
+
+function initTheme() {
+  const saved = localStorage.getItem("diet-theme");
+  if (saved) {
+    document.documentElement.setAttribute("data-bs-theme", saved);
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.documentElement.setAttribute("data-bs-theme", "dark");
+  }
+  syncThemeIcon();
+}
+
+function toggleTheme() {
+  const next = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-bs-theme", next);
+  localStorage.setItem("diet-theme", next);
+  syncThemeIcon();
+}
+
+function syncThemeIcon() {
+  const dark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+  document.getElementById("themeIcon").className = dark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+}
+
+// --- People ---
+
+function changePeople(d) {
+  people = Math.max(1, people + d);
+  document.getElementById("peopleCount").textContent = people;
+  document.getElementById("minusBtn").disabled = people <= 1;
+  render();
+}
+
+// --- Init ---
+
+selectedDay = getISTDayIndex();
+initTheme();
+
+fetch("data.json")
+  .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+  .then(d => {
+    DATA = d.days;
+    buildPills();
+    render();
+    document.getElementById("loading").style.display = "none";
+  })
+  .catch(() => {
+    document.getElementById("loading").innerHTML =
+      '<div class="text-center text-danger"><i class="bi bi-exclamation-triangle fs-1 d-block mb-2"></i>' +
+      '<p class="mb-1 fw-semibold">Could not load meal data</p>' +
+      '<small class="text-body-secondary">Serve via HTTP (e.g. <code>npx serve .</code>)</small></div>';
+  });
+
+// --- Day pills ---
+
+function buildPills() {
+  const container = document.getElementById("dayPills");
+  container.innerHTML = DATA.map((d, i) =>
+    `<button class="day-pill${i === selectedDay && !showWeek ? ' active' : ''}" onclick="selectDay(${i})">${SHORT_DAYS[i] || d.day.slice(0,3)}</button>`
+  ).join("");
+
+  // Auto-scroll active pill into view
+  const activeBtn = container.querySelector(".day-pill.active");
+  if (activeBtn) {
+    activeBtn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }
+}
+
+function selectDay(i) {
+  selectedDay = i;
+  showWeek = false;
+  document.getElementById("weekLabel").textContent = "Full Week";
+  buildPills();
+  render();
+}
+
+function toggleWeek() {
+  showWeek = !showWeek;
+  document.getElementById("weekLabel").textContent = showWeek ? "Today Only" : "Full Week";
+  buildPills();
+  render();
+}
+
+// --- Render ---
+
+function render() {
+  const day = DATA[selectedDay];
+  if (!day) return;
+
+  document.getElementById("greeting").innerHTML =
+    `${getGreeting()}! Here's your <strong>${showWeek ? "weekly" : day.day}</strong> plan` +
+    `<span class="d-block mt-1" style="font-size:0.78rem">${fmtDate()}</span>`;
+
+  const days = showWeek ? DATA : [day];
+  const isToday = !showWeek;
 
   let html = "";
-  let prepHtml = `
-    <div class="bg-white dark:bg-slate-800 shadow rounded-xl p-4">
-    <b>🧠 Tomorrow Prep</b><br>
-  `;
 
-  days.forEach(day => {
+  days.forEach(d => {
+    if (showWeek) {
+      html += `<div class="day-hdr mt-4 mb-2"><span>${d.day}</span></div>`;
+    }
 
-    html += `
-      <div class="mt-4 text-indigo-500 font-semibold">
-        ${day.day} • ${day.seed}
-      </div>
-    `;
+    html += '<div class="timeline">';
 
-    for(let key in day.meals){
+    for (const key of MEAL_ORDER) {
+      if (!d.meals[key]) continue;
+      const meal = d.meals[key];
+      const ts = isToday ? mealTimeState(key) : "future";
+      const icon = MEAL_ICONS[key] || "🍽️";
 
-      let meal = day.meals[key];
-
-      if(typeof meal === "string"){
+      if (typeof meal === "string") {
         html += `
-          <div class="bg-white dark:bg-slate-800 shadow p-3 rounded-xl mt-2">
-            ${meal}
+          <div class="tl-item${ts === 'active' ? ' is-active' : ''}${ts === 'past' ? ' is-past' : ''}">
+            <div class="tl-dot"></div>
+            <div class="card simple-meal p-3">
+              <div class="d-flex align-items-start gap-2">
+                <span class="meal-icon">${icon}</span>
+                <div>
+                  <div class="meal-type">${key}</div>
+                  <div class="simple-meal-text">${meal}</div>
+                </div>
+              </div>
+            </div>
           </div>`;
         continue;
       }
 
-      let ing="";
-      for(let i in meal.ingredients){
-        ing += `${i}: ${meal.ingredients[i]*people}<br>`;
+      const active = ts === "active";
+      const expanded = active;
+
+      let ingRows = "";
+      for (const [name, val] of Object.entries(meal.ingredients)) {
+        const scaled = typeof val === "number" ? val * people : val;
+        ingRows += `<tr><td>${name}</td><td>${scaled}</td></tr>`;
       }
 
-      let isActive = key===current;
+      const steps = meal.steps.map(s => `<li>${s}</li>`).join("");
+
+      let prepNote = "";
+      if (meal.prep && meal.prep.length) {
+        prepNote = `<div class="alert alert-info py-2 px-3 mt-2 mb-0" style="font-size:0.78rem;border-radius:0.75rem">
+          <i class="bi bi-info-circle me-1"></i><strong>Prep:</strong> ${meal.prep.join(", ")}</div>`;
+      }
 
       html += `
-      <div class="mt-3 rounded-xl p-4 cursor-pointer transition
-        ${isActive
-          ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg"
-          : "bg-white dark:bg-slate-800 shadow"}
-      " onclick="toggle(this)">
-        
-        <div class="font-semibold">
-          ${getIcon(key)} ${key.toUpperCase()} • ${meal.name}
-        </div>
-
-        <div class="${isActive ? "" : "hidden"} mt-2 details text-sm">
-          <b>Ingredients:</b><br>${ing}
-          <b>Steps:</b><br>${meal.steps.join("<br>")}
-        </div>
-      </div>
-      `;
-
-      if(meal.prep){
-        meal.prep.forEach(p=>{
-          prepHtml += "• " + p + "<br>";
-        });
-      }
+        <div class="tl-item${active ? ' is-active' : ''}${ts === 'past' ? ' is-past' : ''}">
+          <div class="tl-dot"></div>
+          <div class="card meal-card${active ? ' is-active' : ''}${expanded ? ' expanded' : ''}" onclick="toggleCard(this)">
+            <div class="meal-card-hdr">
+              <span class="meal-icon">${icon}</span>
+              <div class="flex-grow-1 min-width-0">
+                <div class="meal-type">${key}</div>
+                <div class="meal-name">${meal.name}</div>
+              </div>
+              <i class="bi bi-chevron-down meal-chev"></i>
+            </div>
+            <div class="meal-body">
+              <div class="meal-body-inner">
+                <h6 class="section-label"><i class="bi bi-basket me-1"></i>Ingredients</h6>
+                <table class="table table-sm ing-table mb-3"><tbody>${ingRows}</tbody></table>
+                <h6 class="section-label"><i class="bi bi-list-ol me-1"></i>Steps</h6>
+                <ol class="steps-list mb-2">${steps}</ol>
+                ${prepNote}
+              </div>
+            </div>
+          </div>
+        </div>`;
     }
 
+    html += "</div>";
   });
-
-  prepHtml += "</div>";
 
   document.getElementById("app").innerHTML = html;
-  document.getElementById("prep").innerHTML = prepHtml;
+
+  // Prep section: show prep from TOMORROW's meals (what to prepare tonight)
+  const prepEl = document.getElementById("prep");
+  if (!showWeek) {
+    const tomorrowIdx = (selectedDay + 1) % DATA.length;
+    const tomorrow = DATA[tomorrowIdx];
+    let tomorrowPrep = [];
+    for (const key of MEAL_ORDER) {
+      const meal = tomorrow.meals[key];
+      if (meal && typeof meal === "object" && meal.prep && meal.prep.length) {
+        tomorrowPrep.push(...meal.prep);
+      }
+    }
+    const unique = [...new Set(tomorrowPrep)];
+    if (unique.length) {
+      prepEl.innerHTML = `
+        <div class="alert prep-callout shadow-sm">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-clipboard-check fs-5" style="color:#f59e0b"></i>
+            <strong>Prep for ${tomorrow.day}</strong>
+          </div>
+          <ul class="mb-0 ps-3">
+            ${unique.map(p => `<li>${p}</li>`).join("")}
+          </ul>
+        </div>`;
+    } else {
+      prepEl.innerHTML = "";
+    }
+  } else {
+    prepEl.innerHTML = "";
+  }
 }
 
-function toggle(el){
-  el.querySelector(".details").classList.toggle("hidden");
+function toggleCard(el) {
+  el.classList.toggle("expanded");
 }
 
-function toggleTheme(){
-  document.documentElement.classList.toggle("dark");
-}
-
-function toggleMenu(){
-  const m = document.getElementById("menu");
-  m.style.left = m.style.left === "0px" ? "-260px" : "0px";
-}
-
-function buildMenu(){
-  let m = document.getElementById("menu");
-  DATA.forEach((d,i)=>{
-    m.innerHTML += `
-      <div onclick="selectDay(${i})"
-        class="p-2 cursor-pointer hover:bg-indigo-100 dark:hover:bg-slate-700 rounded">
-        ${d.day}
-      </div>`;
-  });
-}
-
-function selectDay(i){
-  selectedDay=i;
-  toggleMenu();
-  render();
-}
-
-function toggleWeek(){
-  showWeek=!showWeek;
-  render();
-}
-
-// Icons
-function getIcon(key){
-  return {
-    morning:"🌅",
-    breakfast:"🍳",
-    lunch:"🥗",
-    snack:"☕",
-    dinner:"🌙"
-  }[key] || "";
+// --- Service Worker ---
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").catch(() => {});
 }
 
 </script>
-
 </body>
 </html>

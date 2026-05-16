@@ -4,13 +4,13 @@
       "day": "Monday",
       "seed": "Pumpkin seeds",
       "meals": {
-        "morning": "Warm lemon water + 5 soaked almonds + 2 walnuts + 1 tsp chia seeds",
+        "morning": "Warm lemon water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Moong Dal Chilla + Paneer",
           "ingredients": {
-            "Moong dal (cup)": 0.5,
-            "Paneer (g)": 75,
+            "Moong dal (cup)": 0.75,
+            "Paneer (g)": 120,
             "Oil (tsp)": 1,
             "Salt": "to taste",
             "Green chilli": 1
@@ -18,63 +18,76 @@
           "steps": [
             "Soak moong dal in water for 8 hours or overnight",
             "Drain and grind into smooth batter with little water",
-            "Add salt and chopped green chilli",
-            "Heat non-stick pan and lightly grease with oil",
-            "Pour batter and spread like dosa",
-            "Cook both sides until golden",
-            "Add grated paneer as stuffing and fold",
-            "Serve hot"
+            "Add salt and chopped green chilli to the batter",
+            "Heat non-stick pan on medium and lightly grease with oil",
+            "Pour batter and spread in a circular motion like dosa",
+            "Cook on medium heat until edges lift, then flip",
+            "Cook other side until golden brown (about 1–2 minutes)",
+            "Add grated paneer as stuffing and fold in half",
+            "Serve hot with green chutney or ketchup"
           ],
           "prep": [
-            "Soak moong dal overnight"
+            "Soak moong dal overnight",
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Dal + Roti + Salad",
           "ingredients": {
-            "Toor/Moong dal (cup)": 0.5,
+            "Toor/Moong dal (cup)": 0.75,
             "Roti": 2,
             "Oil (tsp)": 1,
             "Jeera": "1 tsp",
             "Garlic cloves": 3
           },
           "steps": [
-            "Wash dal and pressure cook with water and salt (3 whistles)",
-            "Heat 1 tsp oil in pan, add jeera and garlic",
-            "Add cooked dal and simmer for 5–7 minutes",
-            "Prepare fresh salad (cucumber, carrot, onion)",
-            "Serve with roti"
+            "Wash dal 2–3 times until water runs clear",
+            "Add dal to pressure cooker with 2.5 cups water, pinch of turmeric and salt",
+            "Pressure cook for 3 whistles on medium flame",
+            "Heat 1 tsp oil in a tadka pan, add jeera and let it splutter",
+            "Add finely chopped garlic and sauté until light golden",
+            "Pour the tadka into the cooked dal and mix well",
+            "Simmer on low for 5–7 minutes, adjust salt and consistency",
+            "Prepare fresh salad: slice cucumber, carrot, onion, and tomato",
+            "Squeeze lemon and sprinkle chaat masala on the salad",
+            "Serve dal hot with fresh roti and salad on the side"
           ]
         },
 
         "snack": {
           "name": "Roasted Chana + Pumpkin Seeds",
           "ingredients": {
-            "Roasted chana (g)": 30,
-            "Pumpkin seeds (tbsp)": 1
+            "Roasted chana (g)": 50,
+            "Pumpkin seeds (tbsp)": 1.5
           },
           "steps": [
-            "Mix roasted chana and pumpkin seeds",
-            "Consume as evening snack"
+            "Take roasted chana in a bowl",
+            "Add pumpkin seeds and mix well",
+            "Optionally sprinkle a pinch of chaat masala and black salt",
+            "Consume as evening snack with a cup of green tea"
           ]
         },
 
         "dinner": {
           "name": "Paneer Bhurji (Low Oil)",
           "ingredients": {
-            "Paneer (g)": 100,
+            "Paneer (g)": 150,
             "Onion": 1,
             "Tomato": 1,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Heat 1 tsp oil in pan",
-            "Add chopped onion and sauté till soft",
-            "Add tomato and cook until mushy",
-            "Add spices (turmeric, salt)",
-            "Add crumbled paneer and cook for 2–3 minutes",
-            "Serve hot"
+            "Crumble the paneer into small pieces and keep aside",
+            "Heat 1 tsp oil in a non-stick pan on medium flame",
+            "Add finely chopped onion and sauté until translucent (3–4 minutes)",
+            "Add chopped tomato and cook until soft and mushy",
+            "Add turmeric (¼ tsp), red chilli powder (¼ tsp), and salt to taste",
+            "Mix well and cook the masala for 1–2 minutes",
+            "Add crumbled paneer and toss gently for 2–3 minutes on medium heat",
+            "Garnish with fresh coriander leaves",
+            "Serve hot as is or with 1 roti"
           ]
         }
       }
@@ -84,41 +97,56 @@
       "day": "Tuesday",
       "seed": "Flax seeds",
       "meals": {
-        "morning": "Jeera water + soaked almonds + chia seeds",
+        "morning": "Jeera water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Vegetable Oats",
           "ingredients": {
-            "Oats (cup)": 0.5,
+            "Oats (cup)": 0.75,
             "Mixed vegetables (cup)": 1,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Dry roast oats for 2–3 minutes",
-            "Heat oil, add vegetables and sauté",
-            "Add oats and water",
-            "Cook until soft and thick",
-            "Add salt and serve"
+            "Dry roast oats in a pan on low heat for 2–3 minutes until lightly fragrant",
+            "Remove oats and set aside",
+            "Heat 1 tsp oil in the same pan, add mustard seeds and let them splutter",
+            "Add finely chopped onion and sauté for 2 minutes",
+            "Add diced mixed vegetables (carrot, beans, peas, capsicum) and sauté for 3–4 minutes",
+            "Add 2 cups water, salt, and a pinch of turmeric; bring to a boil",
+            "Add the roasted oats and stir well",
+            "Cook on low heat for 3–4 minutes until thick and creamy",
+            "Garnish with coriander leaves and a squeeze of lemon",
+            "Serve hot"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Rajma + Rice",
           "ingredients": {
-            "Rajma (cup)": 0.5,
+            "Rajma (cup)": 0.75,
             "Rice (cup)": 1,
             "Onion": 1,
             "Tomato": 2,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Soak rajma overnight",
-            "Pressure cook rajma (5–6 whistles)",
-            "Heat oil, sauté onion till golden",
-            "Add tomato and cook till soft",
-            "Add spices and cooked rajma",
-            "Simmer for 10 minutes",
-            "Cook rice separately and serve"
+            "Soak rajma in water overnight (at least 8 hours)",
+            "Drain and pressure cook rajma with fresh water and salt (5–6 whistles)",
+            "Heat 1 tsp oil in a heavy-bottomed pan",
+            "Add cumin seeds and let them splutter",
+            "Add finely chopped onion and sauté until golden brown",
+            "Add chopped tomatoes and cook until soft and oil separates",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add turmeric (¼ tsp), red chilli powder (½ tsp), coriander powder (1 tsp), and garam masala (½ tsp)",
+            "Add the cooked rajma with its water and mix well",
+            "Simmer on low heat for 10–15 minutes until gravy thickens",
+            "Mash a few rajma with the back of a spoon for creamy texture",
+            "Cook rice separately: wash and boil with 2 cups water until fluffy",
+            "Serve rajma hot over steamed rice, garnished with coriander"
           ],
           "prep": [
             "Soak rajma overnight"
@@ -128,28 +156,35 @@
         "snack": {
           "name": "Paneer + Flax Seeds",
           "ingredients": {
-            "Paneer (g)": 75,
-            "Flax seeds (tsp)": 1
+            "Paneer (g)": 100,
+            "Flax seeds (tsp)": 1.5
           },
           "steps": [
-            "Lightly roast flax seeds",
-            "Consume with paneer"
+            "Cut paneer into small cubes or slices",
+            "Dry roast flax seeds in a pan on low heat for 1–2 minutes until fragrant",
+            "Optionally sprinkle a pinch of black pepper and chaat masala on paneer",
+            "Eat paneer cubes with roasted flax seeds as a protein-rich snack"
           ]
         },
 
         "dinner": {
           "name": "Tofu Stir Fry",
           "ingredients": {
-            "Tofu (g)": 100,
-            "Vegetables (cup)": 1,
+            "Tofu (g)": 150,
+            "Vegetables (cup)": 1.5,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Heat oil in pan",
-            "Add vegetables and sauté",
-            "Add tofu cubes",
-            "Cook on high flame for 5 minutes",
-            "Add salt and pepper"
+            "Press tofu with a kitchen towel to remove excess moisture",
+            "Cut tofu into bite-sized cubes",
+            "Heat 1 tsp oil in a non-stick pan or wok on high flame",
+            "Add tofu cubes in a single layer and sear for 2–3 minutes per side until golden",
+            "Remove tofu and keep aside",
+            "In the same pan, add sliced bell peppers, broccoli florets, and snap peas",
+            "Stir fry vegetables on high heat for 3–4 minutes (keep them crunchy)",
+            "Add soy sauce (1 tsp), black pepper, and a pinch of salt",
+            "Return the tofu to the pan and toss everything together for 1 minute",
+            "Serve hot, optionally with a squeeze of lemon"
           ]
         }
       }
@@ -159,39 +194,51 @@
       "day": "Wednesday",
       "seed": "Sunflower seeds",
       "meals": {
-        "morning": "Warm water + soaked nuts + chia seeds",
+        "morning": "Warm water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Sprouts Bowl (Curd Optional)",
           "ingredients": {
-            "Sprouts (cup)": 1,
-            "Curd (optional)": 0.5
+            "Sprouts (cup)": 1.5,
+            "Curd (optional, cup)": 0.5
           },
           "steps": [
-            "Wash sprouts properly",
-            "Mix with salt, lemon juice",
-            "Add curd if preferred",
-            "Alternative: replace curd with lemon only"
+            "Rinse sprouted moong thoroughly under running water",
+            "Boil sprouts in water for 5–7 minutes if you prefer them soft, or use raw for crunch",
+            "Drain and transfer to a bowl",
+            "Add finely chopped onion, tomato, and green chilli",
+            "Squeeze half a lemon and add salt to taste",
+            "Add chaat masala (½ tsp) and mix well",
+            "Top with curd if preferred, or skip for a lighter version",
+            "Garnish with fresh coriander and serve immediately"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Chole + Roti",
           "ingredients": {
-            "Chole (cup)": 0.5,
+            "Chole (cup)": 0.75,
             "Roti": 2,
             "Onion": 1,
             "Tomato": 2,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Soak chole overnight",
-            "Pressure cook chole (5–6 whistles)",
-            "Heat oil and sauté onion till golden",
-            "Add tomato and cook till soft",
-            "Add spices and cooked chole",
-            "Simmer for 10 minutes",
-            "Serve with roti"
+            "Soak chole (kabuli chana) in water overnight with a pinch of baking soda",
+            "Drain, rinse, and pressure cook with fresh water, salt, and 1 tea bag for dark colour (5–6 whistles)",
+            "Heat 1 tsp oil in a pan, add cumin seeds and bay leaf",
+            "Add finely chopped onion and sauté until deep golden",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add chopped tomatoes and cook until oil separates",
+            "Add chole masala (1 tsp), turmeric (¼ tsp), red chilli powder (½ tsp), and amchur (½ tsp)",
+            "Add the cooked chole with some of its water, mix well",
+            "Simmer on low heat for 15 minutes, mashing a few chole for thickness",
+            "Garnish with fresh coriander and ginger julienne",
+            "Serve hot with fresh roti"
           ],
           "prep": [
             "Soak chole overnight"
@@ -202,28 +249,36 @@
           "name": "Corn + Peanuts + Sunflower Seeds",
           "ingredients": {
             "Boiled corn (cup)": 1,
-            "Peanuts (tbsp)": 1,
-            "Sunflower seeds (tbsp)": 1
+            "Peanuts (tbsp)": 2,
+            "Sunflower seeds (tbsp)": 1.5
           },
           "steps": [
-            "Mix all ingredients",
-            "Add salt and lemon",
-            "Serve fresh"
+            "Boil sweet corn kernels in water with salt for 8–10 minutes until tender",
+            "Drain and transfer to a bowl",
+            "Dry roast peanuts in a pan for 2–3 minutes on low heat",
+            "Add sunflower seeds and roast for another minute",
+            "Mix everything together in the bowl",
+            "Add salt, black pepper, lemon juice, and chaat masala to taste",
+            "Toss well and serve as a warm or room-temperature snack"
           ]
         },
 
         "dinner": {
           "name": "Moong Dal Soup",
           "ingredients": {
-            "Moong dal (cup)": 0.5,
-            "Garlic cloves": 2
+            "Moong dal (cup)": 0.75,
+            "Garlic cloves": 3
           },
           "steps": [
-            "Pressure cook dal",
-            "Blend lightly",
-            "Add garlic tadka",
-            "Simmer for 5 minutes",
-            "Serve warm"
+            "Wash moong dal 2–3 times and soak for 30 minutes",
+            "Pressure cook dal with 2.5 cups water, turmeric (¼ tsp), and salt (2–3 whistles)",
+            "Let pressure release, then mash or blend the dal lightly for a soupy consistency",
+            "For the tadka: heat ½ tsp ghee, add finely chopped garlic and let it turn golden",
+            "Add cumin seeds (½ tsp), a pinch of hing, and dried red chilli",
+            "Pour the tadka into the dal soup and stir well",
+            "Add a squeeze of lemon juice and adjust salt",
+            "Simmer on low for 3–4 minutes",
+            "Serve warm in a bowl, garnished with fresh coriander"
           ]
         }
       }
@@ -233,63 +288,90 @@
       "day": "Thursday",
       "seed": "Pumpkin seeds",
       "meals": {
-        "morning": "Jeera water + nuts + chia seeds",
+        "morning": "Jeera water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Besan Chilla",
           "ingredients": {
-            "Besan (cup)": 0.5,
-            "Vegetables (cup)": 0.5,
+            "Besan (cup)": 0.75,
+            "Vegetables (cup)": 0.75,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Prepare batter with besan and water",
-            "Add chopped vegetables",
-            "Cook on pan with minimal oil",
-            "Flip and cook both sides"
+            "Take besan in a bowl and gradually add water to make a smooth, pourable batter (like dosa batter consistency)",
+            "Add finely chopped onion, tomato, green chilli, and coriander to the batter",
+            "Add salt, turmeric (¼ tsp), red chilli powder (¼ tsp), and ajwain (½ tsp)",
+            "Mix well and let the batter rest for 5 minutes",
+            "Heat a non-stick pan on medium flame and lightly grease with ½ tsp oil",
+            "Pour a ladleful of batter and spread in a circular motion",
+            "Drizzle a few drops of oil around the edges",
+            "Cook on medium heat until the bottom is golden and edges lift (2–3 minutes)",
+            "Flip carefully and cook the other side for 1–2 minutes",
+            "Serve hot with green chutney or ketchup"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Paneer Curry + Roti",
           "ingredients": {
-            "Paneer (g)": 100,
+            "Paneer (g)": 150,
             "Onion": 1,
             "Tomato": 2,
             "Oil (tsp)": 1
           },
           "steps": [
-            "Cook onion tomato gravy",
-            "Add spices",
-            "Add paneer cubes",
-            "Simmer for 5 minutes"
+            "Cut paneer into cubes and soak in warm water for 5 minutes to soften",
+            "Heat 1 tsp oil in a pan, add cumin seeds and let them splutter",
+            "Add finely chopped onion and sauté until golden brown (4–5 minutes)",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add chopped tomatoes, salt, and cook until soft and oil separates",
+            "Add turmeric (¼ tsp), red chilli powder (½ tsp), coriander powder (1 tsp), and garam masala (½ tsp)",
+            "Cook the masala for 2 minutes until fragrant",
+            "Add ½ cup water and bring to a simmer",
+            "Drain the paneer and add cubes to the gravy",
+            "Simmer on low for 5 minutes, do not stir too much to keep paneer intact",
+            "Garnish with coriander and serve hot with fresh roti"
           ]
         },
 
         "snack": {
           "name": "Sprouts + Pumpkin Seeds",
           "ingredients": {
-            "Sprouts (cup)": 1,
-            "Pumpkin seeds (tbsp)": 1
+            "Sprouts (cup)": 1.5,
+            "Pumpkin seeds (tbsp)": 1.5
           },
           "steps": [
-            "Mix sprouts and seeds",
-            "Add lemon and salt"
+            "Rinse sprouts and lightly steam or boil for 5 minutes if preferred soft",
+            "Drain and transfer to a bowl",
+            "Add pumpkin seeds and mix gently",
+            "Season with salt, lemon juice, and a pinch of chaat masala",
+            "Serve immediately as an evening protein snack"
           ]
         },
 
         "dinner": {
           "name": "Vegetable Khichdi",
           "ingredients": {
-            "Rice (cup)": 0.25,
-            "Dal (cup)": 0.25,
-            "Vegetables (cup)": 1
+            "Rice (cup)": 0.33,
+            "Dal (cup)": 0.33,
+            "Vegetables (cup)": 1.5
           },
           "steps": [
-            "Wash rice and dal",
-            "Add vegetables and water",
-            "Pressure cook (3 whistles)",
-            "Serve warm"
+            "Wash rice and moong dal together 2–3 times until water runs clear",
+            "Soak for 15–20 minutes, then drain",
+            "Heat ½ tsp ghee in a pressure cooker, add cumin seeds, and let them splutter",
+            "Add a pinch of hing, turmeric (¼ tsp), and finely chopped ginger",
+            "Add diced vegetables (carrot, beans, peas, potato) and sauté for 2 minutes",
+            "Add the soaked rice-dal mixture and stir gently",
+            "Add 2.5 cups water, salt to taste, and mix well",
+            "Close the lid and pressure cook for 3 whistles on medium flame",
+            "Let pressure release naturally",
+            "Mash gently with a spoon for a creamy texture",
+            "Serve warm with a dollop of ghee and pickle on the side"
           ]
         }
       }
@@ -299,56 +381,88 @@
       "day": "Friday",
       "seed": "Flax seeds",
       "meals": {
-        "morning": "Warm water + nuts + chia",
+        "morning": "Warm water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Upma + Peanuts",
           "ingredients": {
-            "Suji (cup)": 0.5,
-            "Peanuts (tbsp)": 1,
+            "Suji (cup)": 0.75,
+            "Peanuts (tbsp)": 2,
             "Vegetables (cup)": 1
           },
           "steps": [
-            "Dry roast suji",
-            "Cook vegetables",
-            "Add water and suji",
-            "Cook until thick"
+            "Dry roast suji (rava) in a pan on low heat for 3–4 minutes until lightly golden and fragrant",
+            "Remove and set aside",
+            "In the same pan, heat 1 tsp oil and add mustard seeds, urad dal (½ tsp), and curry leaves",
+            "Add peanuts and roast for 1 minute until light brown",
+            "Add finely chopped onion and sauté for 2 minutes",
+            "Add diced carrot, peas, and beans; sauté for 2–3 minutes",
+            "Add 2 cups water, salt, and a pinch of turmeric; bring to a rolling boil",
+            "Reduce heat to low and slowly add the roasted suji while stirring continuously to avoid lumps",
+            "Cook on low heat for 2–3 minutes until thick and all water is absorbed",
+            "Cover and let it rest for 2 minutes",
+            "Garnish with fresh coriander and a squeeze of lemon; serve hot"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Tofu Curry + Rice",
           "ingredients": {
-            "Tofu (g)": 100,
-            "Rice (cup)": 1
+            "Tofu (g)": 150,
+            "Rice (cup)": 1,
+            "Onion": 1,
+            "Tomato": 2
           },
           "steps": [
-            "Cook tofu in tomato gravy",
-            "Cook rice separately",
-            "Serve hot"
+            "Press tofu to remove excess water, then cut into cubes",
+            "Heat 1 tsp oil in a pan, add cumin seeds and let them splutter",
+            "Add finely chopped onion and sauté until golden (3–4 minutes)",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add chopped tomatoes and cook until soft and mushy",
+            "Add turmeric (¼ tsp), red chilli powder (½ tsp), coriander powder (1 tsp), and salt",
+            "Cook the masala for 2 minutes until oil separates",
+            "Add tofu cubes gently and coat with the masala",
+            "Add ½ cup water, cover, and simmer for 8–10 minutes on low heat",
+            "For rice: wash and cook 1 cup rice with 2 cups water until fluffy",
+            "Garnish curry with coriander and serve hot with steamed rice"
           ]
         },
 
         "snack": {
           "name": "Roasted Makhana",
           "ingredients": {
-            "Makhana (cup)": 1
+            "Makhana (cup)": 1.5
           },
           "steps": [
-            "Dry roast makhana for 5–7 minutes"
+            "Heat a heavy-bottomed pan or kadai on low flame",
+            "Add makhana (fox nuts) to the dry pan — no oil needed",
+            "Roast on low heat, stirring continuously for 5–7 minutes",
+            "They will become crispy and crunchy when done",
+            "Remove from heat and sprinkle salt and black pepper to taste",
+            "Optionally add a pinch of chaat masala for extra flavour",
+            "Let them cool for a minute and enjoy as a light crunchy snack"
           ]
         },
 
         "dinner": {
           "name": "Dal + Sabzi + Roti",
           "ingredients": {
-            "Dal (cup)": 0.5,
-            "Roti": 2
+            "Dal (cup)": 0.75,
+            "Roti": 2,
+            "Seasonal vegetable (cup)": 1
           },
           "steps": [
-            "Cook dal",
-            "Prepare simple vegetable sabzi",
-            "Serve with roti"
+            "Wash toor or masoor dal 2–3 times and pressure cook with 2.5 cups water, turmeric, and salt (3 whistles)",
+            "For tadka: heat ½ tsp ghee, add cumin seeds, mustard seeds, and dried red chilli",
+            "Add chopped garlic (2 cloves) and sauté until golden",
+            "Pour tadka into the cooked dal, mix, and simmer for 5 minutes",
+            "For sabzi: heat ½ tsp oil, add cumin, and any seasonal vegetable (lauki, tori, or bhindi)",
+            "Add salt, turmeric, and cook covered on low heat until tender (8–10 minutes)",
+            "Serve hot dal and sabzi with fresh roti"
           ]
         }
       }
@@ -358,51 +472,88 @@
       "day": "Saturday",
       "seed": "Watermelon seeds",
       "meals": {
-        "morning": "Lemon water + nuts + chia",
+        "morning": "Warm lemon water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Oats + Milk + Seeds + Fruit",
           "ingredients": {
-            "Oats (cup)": 0.5,
+            "Oats (cup)": 0.75,
             "Milk (cup)": 1,
-            "Fruit": 1
+            "Fruit": 1,
+            "Watermelon seeds (tbsp)": 1
           },
           "steps": [
-            "Cook oats with milk",
-            "Add chopped fruit",
-            "Add seeds and serve"
+            "Pour milk into a saucepan and bring to a gentle simmer on medium heat",
+            "Add rolled oats and stir well",
+            "Cook on low heat for 3–4 minutes, stirring occasionally, until thick and creamy",
+            "Transfer to a bowl and let it cool slightly",
+            "Chop a banana or any seasonal fruit (apple, mango, papaya) into small pieces",
+            "Top the oats with chopped fruit",
+            "Sprinkle watermelon seeds and a drizzle of honey if desired",
+            "Serve warm or at room temperature"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Rajma + Roti",
           "ingredients": {
-            "Rajma (cup)": 0.5,
-            "Roti": 2
+            "Rajma (cup)": 0.75,
+            "Roti": 2,
+            "Onion": 1,
+            "Tomato": 2
           },
           "steps": [
-            "Cook rajma and serve with roti"
+            "Soak rajma overnight (at least 8 hours) in plenty of water",
+            "Drain and pressure cook with fresh water and salt (5–6 whistles)",
+            "Heat ½ tsp oil, add cumin seeds and let them splutter",
+            "Add finely chopped onion and sauté until golden brown",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add chopped tomatoes and cook until oil separates",
+            "Add rajma masala (1 tsp), turmeric, red chilli powder, and salt",
+            "Add cooked rajma with its water and simmer on low for 10–15 minutes",
+            "Mash a few beans with the back of a spoon for a thicker gravy",
+            "Garnish with coriander and serve hot with roti"
+          ],
+          "prep": [
+            "Soak rajma overnight"
           ]
         },
 
         "snack": {
           "name": "Paneer + Seeds",
           "ingredients": {
-            "Paneer (g)": 75,
-            "Seeds (tbsp)": 1
+            "Paneer (g)": 100,
+            "Watermelon seeds (tbsp)": 1.5
           },
           "steps": [
-            "Mix and consume"
+            "Cut paneer into bite-sized cubes",
+            "Lightly roast watermelon seeds in a dry pan for 1–2 minutes on low heat",
+            "Optionally sprinkle black pepper and a pinch of salt on paneer cubes",
+            "Eat together as a high-protein evening snack"
           ]
         },
 
         "dinner": {
           "name": "Tofu Stir Fry",
           "ingredients": {
-            "Tofu (g)": 100
+            "Tofu (g)": 150,
+            "Vegetables (cup)": 1.5
           },
           "steps": [
-            "Stir fry tofu and vegetables"
+            "Press tofu between kitchen towels for 10 minutes to remove moisture",
+            "Cut tofu into bite-sized cubes",
+            "Heat 1 tsp oil in a wok or non-stick pan on high flame",
+            "Add tofu cubes and sear for 2–3 minutes on each side until golden and crispy",
+            "Remove tofu and set aside",
+            "In the same pan, add sliced onion, bell pepper, and any available vegetables",
+            "Stir fry on high heat for 3–4 minutes, keeping vegetables crunchy",
+            "Add soy sauce (1 tsp), black pepper, and a pinch of salt",
+            "Return the tofu to the pan and toss everything together for 1 minute",
+            "Serve hot, garnished with sesame seeds and spring onion if available"
           ]
         }
       }
@@ -412,32 +563,49 @@
       "day": "Sunday",
       "seed": "Mixed seeds",
       "meals": {
-        "morning": "Warm water + nuts + chia",
+        "morning": "Warm water + 7 soaked almonds + 3 walnuts + 1 tsp chia seeds",
 
         "breakfast": {
           "name": "Sprouts + Fruit",
           "ingredients": {
-            "Sprouts (cup)": 1,
+            "Sprouts (cup)": 1.5,
             "Fruit": 1
           },
           "steps": [
-            "Mix sprouts with chopped fruit",
-            "Add lemon and salt"
+            "Rinse sprouted moong well under running water",
+            "Lightly boil or steam for 5 minutes if you prefer them soft",
+            "Drain and transfer to a bowl",
+            "Chop seasonal fruit (apple, pomegranate, or banana) into small pieces",
+            "Add fruit to the sprouts and toss gently",
+            "Season with salt, lemon juice, and chaat masala",
+            "Mix well and serve immediately as a fresh, light breakfast"
+          ],
+          "prep": [
+            "Soak 7 almonds overnight",
+            "Soak 1 tsp chia seeds in water overnight"
           ]
         },
 
         "lunch": {
           "name": "Chole + Rice",
           "ingredients": {
-            "Chole (cup)": 0.5,
-            "Rice (cup)": 1
+            "Chole (cup)": 0.75,
+            "Rice (cup)": 1,
+            "Onion": 1,
+            "Tomato": 2
           },
           "steps": [
-            "Soak chole overnight",
-            "Pressure cook chole",
-            "Prepare onion tomato gravy",
-            "Mix and simmer",
-            "Serve with rice"
+            "Soak chole overnight in water with a pinch of baking soda",
+            "Drain, rinse, and pressure cook with fresh water, salt, and 1 tea bag (5–6 whistles)",
+            "Heat 1 tsp oil, add cumin seeds and bay leaf",
+            "Add finely chopped onion and sauté until golden",
+            "Add ginger-garlic paste (1 tsp) and cook for 1 minute",
+            "Add chopped tomatoes and cook until soft and oil separates",
+            "Add chole masala (1 tsp), turmeric, red chilli powder, and amchur",
+            "Add the cooked chole with water and simmer for 15 minutes on low",
+            "Mash a few chole for thicker gravy and adjust salt",
+            "Cook rice separately: wash and boil with 2 cups water until fluffy",
+            "Serve chole hot over rice, garnished with coriander and ginger julienne"
           ],
           "prep": [
             "Soak chole overnight"
@@ -447,22 +615,33 @@
         "snack": {
           "name": "Chana + Seeds",
           "ingredients": {
-            "Chana (g)": 30,
-            "Seeds (tbsp)": 1
+            "Roasted chana (g)": 50,
+            "Mixed seeds (tbsp)": 1.5
           },
           "steps": [
-            "Mix and eat"
+            "Take roasted chana (black or white) in a bowl",
+            "Add mixed seeds (pumpkin, sunflower, flax) and toss together",
+            "Sprinkle a pinch of salt, black pepper, and chaat masala",
+            "Squeeze a few drops of lemon for freshness",
+            "Mix well and enjoy as a crunchy, protein-rich snack"
           ]
         },
 
         "dinner": {
           "name": "Light Dal + Salad",
           "ingredients": {
-            "Dal (cup)": 0.5
+            "Dal (cup)": 0.75,
+            "Salad vegetables": "1 bowl"
           },
           "steps": [
-            "Cook dal",
-            "Serve with fresh salad"
+            "Wash masoor or moong dal 2–3 times until water runs clear",
+            "Pressure cook with 2.5 cups water, turmeric (¼ tsp), and salt (3 whistles)",
+            "For tadka: heat ½ tsp ghee, add cumin seeds, chopped garlic (2 cloves), and dried red chilli",
+            "Once garlic is golden, pour the tadka into the dal",
+            "Add a squeeze of lemon and simmer for 3–4 minutes",
+            "For salad: slice cucumber, carrot, onion, and tomato",
+            "Season salad with salt, lemon, and a pinch of chaat masala",
+            "Serve dal warm alongside the fresh salad — a light end to the week"
           ]
         }
       }
